@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_xbig">50sp</dimen>
+    <dimen name="activity_margin_top_size_big">40dp</dimen>
+    <dimen name="button_text_size_big">25sp</dimen>
+    <dimen name="edit_text_size_big">30sp</dimen>
+    <dimen name="margin_edit_text_normal">20dp</dimen>
+    <dimen name="text_size_normal">20sp</dimen>
+</resources>

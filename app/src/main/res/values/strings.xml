@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">WeatherAndroidApp</string>
+    <string name="text_main_activity_weather">WELCOME!</string>
+    <string name="button_main_ok">OK</string>
+    <string name="text_edit_country">Enter your city</string>
+    <string name="text_main_activity_subtitle_weather">Do you want to know the weather of Tandil?</string>
+    <string name="text_weather_grid">Weather Grid!</string>
 </resources>
