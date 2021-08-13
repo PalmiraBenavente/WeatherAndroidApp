@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_weather"
+    tools:context=".views.WeatherWelcomeFragment">
+
+    <TextView
+        android:id="@+id/text_main_title_weather"
+        style="@style/TextMainTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_top_size_big"
+        android:text="@string/text_main_activity_weather"
+        app:layout_constraintBottom_toTopOf="@id/text_main_subtitle_weather"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_main_subtitle_weather"
+        style="@style/TextMainSubtitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_top_size_big"
+        android:text="@string/text_main_activity_subtitle_weather"
+        app:layout_constraintBottom_toTopOf="@id/buttonMainSelectWeather"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_title_weather" />
+
+    <Button
+        android:id="@+id/buttonMainSelectWeather"
+        style="@style/ButtonMainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_main_ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_main_subtitle_weather" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
