@@ -6,6 +6,8 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
+import com.example.di.repositoriesModule
+import com.example.di.useCasesModule
 
 class WeatherApp : Application() {
     override fun onCreate() {
@@ -13,7 +15,7 @@ class WeatherApp : Application() {
         startKoin {
             androidContext(this@WeatherApp)
             androidLogger(Level.DEBUG)
-            modules(listOf(viewModelsModule))
+            modules(listOf(viewModelsModule, useCasesModule, repositoriesModule))
         }
     }
 }

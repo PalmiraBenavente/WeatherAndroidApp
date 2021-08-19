@@ -23,9 +23,7 @@ class WeatherWelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentWeatherWelcomeBinding.inflate(layoutInflater)
-        viewModel.mutableLiveDataToDetails.observe(
-            this.viewLifecycleOwner,
-            Observer { updateUI(it) })
+        viewModel.getLiveDataToDetails().observe(this.viewLifecycleOwner, Observer { updateUI(it) })
         binding.buttonMainSelectWeather.setOnClickListener { viewModel.buttonOkPressed() }
         return binding.root
     }

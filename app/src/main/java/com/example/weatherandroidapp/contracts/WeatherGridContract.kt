@@ -1,7 +1,7 @@
 package com.example.weatherandroidapp.contracts
 
-interface MainContract {
+interface WeatherGridContract {
     interface ViewModel {
-        fun buttonOkPressed()
+        fun getWeatherInfo()
     }
 }
