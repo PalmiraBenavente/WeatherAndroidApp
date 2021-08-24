@@ -8,7 +8,9 @@ import com.example.weatherandroidapp.utils.NavigationEvent
 
 class WeatherWelcomeViewModel : ViewModel(), MainContract.ViewModel {
 
-    val mutableLiveDataToDetails: MutableLiveData<Event<NavigationEvent>> = MutableLiveData()
+    private val mutableLiveDataToDetails: MutableLiveData<Event<NavigationEvent>> by lazy { MutableLiveData() }
+
+    fun getLiveDataToDetails() = this.mutableLiveDataToDetails
 
     override fun buttonOkPressed() {
         mutableLiveDataToDetails.value = Event(NavigationEvent.NAVIGATE_TO_WEATHER_DETAILS)
