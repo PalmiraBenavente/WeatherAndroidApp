@@ -15,7 +15,4 @@ data class ResponseApi(
 
     @SerializedName("list")
     val list: List<ListResponse> = emptyList(),
-
-    @SerializedName("city")
-    val city: CityResponse = CityResponse()
 )
