@@ -5,5 +5,5 @@
     <string name="text_edit_country">Enter your city</string>
     <string name="text_main_activity_subtitle_weather">Do you want to know the weather of Tandil?</string>
     <string name="text_weather_grid">Weather Grid!</string>
-    <string name="toast_show_ok_service"> the temperature in %1$s is %2$s</string>
+    <string name="toast_show_ok_service"> the temperature is %1$s</string>
 </resources>

@@ -5,8 +5,7 @@ import com.example.domain.utils.ZERO
 
 data class ResponseWeatherInfo(
     val cod: String = NOT_FOUND,
-    val message: Int = ZERO,
-    val cnt: Int = ZERO,
-    val list: List<ListWeather> = listOf(),
-    val city: City = City()
+    val message: Int? = ZERO,
+    val cnt: Int? = ZERO,
+    val list: List<ListWeather>? = listOf(),
 )
