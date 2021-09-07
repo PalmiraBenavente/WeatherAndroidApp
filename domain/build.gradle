@@ -11,7 +11,15 @@ java {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    def lib = rootProject.ext.generalDependencies
+
+    // Basics
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'org.koin:koin-androidx-viewmodel:2.1.5'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+
+    //VIEWMODEL
+    implementation lib .koinViewmodel
+
+    //COROUTINES
+    implementation lib .corouties
 }
