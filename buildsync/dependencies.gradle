@@ -1,0 +1,100 @@
+ext {
+    // Basics
+    kotlinVersion = "1.5.10"
+    appCompatVersion = "1.3.1"
+    coreKtxVersion = "1.6.0"
+
+    // Lifecycle
+    lifecycleVersion = "2.3.1"
+
+    // Room
+    roomVersion = "2.3.0"
+
+    // Retrofit
+    retrofitVersion = "2.9.0"
+    retrofitCoroutinesVersion = "0.8.0"
+    retrofitGsonVersion = "2.9.0"
+
+    // Koin
+    koinVersion = "2.1.5"
+
+    // Navigation
+    navigationVersion = "2.3.5"
+
+    // UI
+    constraintLayoutVersion = "2.1.0"
+    googleMaterialVersion = "1.4.0"
+
+    // Coroutines
+    coroutinesVersion = "1.4.1"
+
+    //Legacy
+    legacyVersion = "1.0.0"
+
+    //HTTP
+    httpVersion = "4.9.0"
+
+    //SERIALIZATION
+    serializationVersion = "1.2.2"
+
+    // Test
+    jUnitVersion = "4.13.2"
+    jUnitExtAndroidVersion = "1.1.3"
+    espressoTestingVersion = "3.4.0"
+    koinTestingVersion = "3.1.2"
+
+    generalDependencies = [
+            // Basics
+            kotlinJdk7 : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            kotlin : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}",
+            appCompat : "androidx.appcompat:appcompat:${appCompatVersion}",
+            coreKtx : "androidx.core:core-ktx:${coreKtxVersion}",
+
+            // Lifecycle
+            lifecycleLiveData : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}",
+            lifecycleViewModel : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}",
+            lifecycleRunTime : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}",
+
+            // Room
+            roomRuntime : "androidx.room:room-runtime:${roomVersion}",
+            roomCompiler : "androidx.room:room-compiler:${roomVersion}",
+            roomKtx : "androidx.room:room-ktx:${roomVersion}",
+
+            // Retrofit
+            retrofit : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitCoroutines : "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${retrofitCoroutinesVersion}",
+            retrofitGson : "com.squareup.retrofit2:converter-gson:${retrofitGsonVersion}",
+
+            // Koin
+            koin : "org.koin:koin-android:${koinVersion}",
+            koinScope : "org.koin:koin-androidx-scope:${koinVersion}",
+            koinViewmodel : "org.koin:koin-androidx-viewmodel:${koinVersion}",
+            koinFragment : "org.koin:koin-androidx-fragment:${koinVersion}",
+
+            // Navigation
+            navigationFragment : "androidx.navigation:navigation-fragment-ktx:${navigationVersion}",
+            navigationUi :"androidx.navigation:navigation-ui-ktx:${navigationVersion}",
+
+            // UI
+            constraintLayout : "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+            googleMaterial : "com.google.android.material:material:${googleMaterialVersion}",
+
+            // Coroutines
+            coroutines : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+
+            // Legacy
+            legacy : "androidx.legacy:legacy-support-v4:${legacyVersion}",
+
+            //HTTP
+            okhttp3 : "com.squareup.okhttp3:okhttp:${httpVersion}",
+
+            //SERIALIZATION
+            serializationCore : "org.jetbrains.kotlinx:kotlinx-serialization-core:${serializationVersion}",
+            serializationJson : "org.jetbrains.kotlinx:kotlinx-serialization-json:${serializationVersion}",
+
+            jUnit : "junit:junit:${jUnitVersion}",
+            jUnitExtAndroid : "androidx.test.ext:junit:${jUnitExtAndroidVersion}",
+            espressoTesting : "androidx.test.espresso:espresso-core:${espressoTestingVersion}",
+            koinTest : "io.insert-koin:koin-test:3.1.2${koinTestingVersion}"
+    ]
+}
