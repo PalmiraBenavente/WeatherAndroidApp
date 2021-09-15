@@ -6,4 +6,13 @@
     <string name="text_main_activity_subtitle_weather">Do you want to know the weather of Tandil?</string>
     <string name="text_weather_grid">Weather Grid!</string>
     <string name="toast_show_ok_service"> the temperature is %1$s</string>
+    <string name="details_item_day">dd/mm/yyyy</string>
+    <string name="details_item_min_temp">min</string>
+    <string name="details_item_max_temp">max</string>
+    <string name="details_item_temp">30</string>
+    <string name="details_item_description">Sun</string>
+    <string name="text_view_item_coma">,</string>
+    <string name="details_item_celsius">°C</string>
+    <string name="item_bar">/</string>
+    <string name="text_view_weather_grid_fragment">Weather in Tandil</string>
 </resources>

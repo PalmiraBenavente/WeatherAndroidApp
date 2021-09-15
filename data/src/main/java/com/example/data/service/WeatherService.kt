@@ -9,15 +9,16 @@ class WeatherService {
     private val generator = WeatherServiceRequest()
 
     fun getWeatherCityInfoToService(): ServiceResult<ResponseApi> {
-        val callResponse = generator.createService(WeatherApi::class.java).callWeatherInfo(CITY, BuildConfig.ApiKey, UNITS)
-        return try {
+        val callResponse = generator.createService(WeatherApi::class.java)
+            .callWeatherInfo(CITY, BuildConfig.ApiKey, UNITS)
+        try {
             val response = callResponse.execute()
             if (response.isSuccessful) {
-                response.body()?.let { ServiceResult.Success(it) }
+                response.body()?.let { return ServiceResult.Success(it) }
             }
-            ServiceResult.Failure(Exception(response.message()))
+            return ServiceResult.Failure(Exception(response.message()))
         } catch (e: Exception) {
-            ServiceResult.Failure(Exception(e.message))
+            return ServiceResult.Failure(Exception(e.message))
         }
     }
 

@@ -6,4 +6,14 @@
     <dimen name="edit_text_size_big">30sp</dimen>
     <dimen name="margin_edit_text_normal">20dp</dimen>
     <dimen name="text_size_normal">20sp</dimen>
+    <dimen name="text_size_item_weatherStyle_normal">25sp</dimen>
+    <dimen name="text_size_item_dayStyle_normal">20sp</dimen>
+    <dimen name="item_weather_card_margin_horizontal">20dp</dimen>
+    <dimen name="item_weather_card_margin_vertical">6dp</dimen>
+    <dimen name="item_weather_card_corner_radius">8dp</dimen>
+    <dimen name="payment_history_internal_margin_vertical">16dp</dimen>
+    <dimen name="payment_history_label_layout_width">135dp</dimen>
+    <dimen name="item_weather_card_width">300dp</dimen>
+    <dimen name="item_padding_card">15dp</dimen>
+
 </resources>

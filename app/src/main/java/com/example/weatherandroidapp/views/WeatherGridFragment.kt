@@ -1,15 +1,11 @@
 package com.example.weatherandroidapp.views
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.lifecycle.Observer
-import com.example.domain.entities.ResponseWeatherInfo
-import com.example.weatherandroidapp.R
+import androidx.fragment.app.Fragment
+import com.example.weatherandroidapp.WeatherAdapter
 import com.example.weatherandroidapp.databinding.WeatherGridFragmentBinding
 import com.example.weatherandroidapp.viewmodels.WeatherGridViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -23,16 +19,23 @@ class WeatherGridFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = WeatherGridFragmentBinding.inflate(layoutInflater)
+        binding = WeatherGridFragmentBinding.inflate(inflater, container, false).also {
+            it.lifecycleOwner = viewLifecycleOwner
+            it.viewModel = viewModel
+        }
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getLiveDataWeatherInfo().observe(viewLifecycleOwner, Observer { updateUINotification(it) })
+        viewModel.getWeather()
+        binding.recyclerViewFragment.adapter = WeatherAdapter()
+        setUpObservers()
     }
 
-    private fun updateUINotification(it: ResponseWeatherInfo?) {
-            Toast.makeText(context, getString(R.string.toast_show_ok_service, it?.list?.first()?.mainResponse?.temperature.toString()), Toast.LENGTH_SHORT).show()
+    private fun setUpObservers() {
+        viewModel.weatherInfoLiveData.observe(::getLifecycle) { weatherInformation ->
+            viewModel.updateWeatherList(weatherInformation)
+        }
     }
 }
