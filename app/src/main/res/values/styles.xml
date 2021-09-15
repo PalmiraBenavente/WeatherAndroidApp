@@ -24,4 +24,23 @@
         <item name="android:textSize">@dimen/button_text_size_big</item>
         <item name="android:textColor">@color/white</item>
     </style>
+
+    <style name="WeatherItemStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_item_weatherStyle_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DayItemStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_item_dayStyle_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RecyclerViewWeatherBackground">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="background">@color/teal_200</item>
+    </style>
 </resources>
