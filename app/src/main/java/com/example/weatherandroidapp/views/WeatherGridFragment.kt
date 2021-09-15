@@ -30,12 +30,5 @@ class WeatherGridFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getWeather()
         binding.recyclerViewFragment.adapter = WeatherAdapter()
-        setUpObservers()
-    }
-
-    private fun setUpObservers() {
-        viewModel.weatherInfoLiveData.observe(::getLifecycle) { weatherInformation ->
-            viewModel.updateWeatherList(weatherInformation)
-        }
     }
 }
